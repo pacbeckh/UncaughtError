@@ -4,7 +4,7 @@ Steps to reproduce:
 
 1. Clone project https://github.com/pacbeckh/UncaughtError
 2. Open atom in root directory
-3. Open file tests\QL\TypeChecker\Expressions\OperandTypesTests.elm
+3. Open file `tests\QL\TypeChecker\Expressions\OperandTypesTests.elm`
 4. Remove the above file in Atom 
 
 Demo:
