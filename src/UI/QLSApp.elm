@@ -76,10 +76,19 @@ update msg model =
 
         QLSInputMsg subMsg ->
             let
+                maybeForm =
+                    QLInput.asForm model.qlInput
+
                 newQLSInput =
                     QLSInput.update subMsg model.qlsInput
+
+                maybeNewStyleSheet =
+                    QLSInput.asStyleSheet newQLSInput
             in
-                { model | qlsInput = QLSInput.update subMsg model.qlsInput }
+                { model
+                    | qlsInput = QLSInput.update subMsg model.qlsInput
+                    , formRenderer = Maybe.map2 FormRenderer.init maybeForm maybeNewStyleSheet
+                }
 
         FormRendererMsg subMsg ->
             { model | formRenderer = Maybe.map (FormRenderer.update subMsg) model.formRenderer }
