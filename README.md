@@ -9,7 +9,7 @@ Steps to reproduce:
 5. Put your cursor right behind SingleChildSection and press space
 
 
-
+![ScreenCapture](https://github.com/pacbeckh/UncaughtRangeError/blob/master/UncaughtRangeError.gif)
 
 **Atom**: 1.14.4 ia32
 **Electron**: 1.3.13
